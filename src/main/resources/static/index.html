@@ -2,23 +2,38 @@
 <html>
 
 <head>
+    <title>App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script
             src="https://code.jquery.com/jquery-3.2.1.js"
             integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
             crossorigin="anonymous"></script>
 
+
 </head>
 
-<body>
+<body style="background: ghostwhite;">
 
-<h2>Helloo</h2>
+<div class="container">
+    <div class="row" style="width: 50%;margin: auto;">
+        <div class="col">
+            <label for="inputname">Enter your name:</label>
+            <input id="inputname" type="text" class="form-control" />
+            <input id="buttonName" type="submit" value="Click" class="btn btn-primary" ></br>
+            <p id="hello"></p></br>
+            <img src="img2.png" alt="Show/Hide Image" id="myImg"/></br>
+            <button type="button" id="btn1">Show/Hide Image</button>
+        </div>
+    </div>
+</div>
 
-<img src="img2.png" alt="Show/Hide Image" id="myImg"/></br>
-<button type="button" id="btn1">Show/Hide Image</button></br>
-<button type="button" id="btn2">click</button>
 
 </body>
 
 <script src="app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
 
 </html>

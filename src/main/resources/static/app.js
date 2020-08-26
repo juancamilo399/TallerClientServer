@@ -3,9 +3,13 @@ console.log(buttonimg);
 buttonimg.addEventListener('click', function () {
     $('#myImg').toggle('slow');
 });
-var button = document.getElementById('btn2');
-console.log(button);
 
-button.addEventListener('click', function () {
-    alert("Hiii!");
+
+var buttonName = document.getElementById('buttonName');
+buttonName.addEventListener('click', function () {
+    $("#hello").empty();
+    var name = document.getElementById('inputname');
+    $("#hello").append("hi "+name.value);
 });
+
+
