@@ -5,8 +5,16 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
 
+/**
+ * Class of a Http Server
+ * @author Juan Camilo Angel Hernandez
+ */
 public class HttpServer {
 
+    /**
+     * Return the port that the http server use
+     * @return the port to use
+     */
     private static int getPort() {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
@@ -14,6 +22,10 @@ public class HttpServer {
         return 36000;
     }
 
+    /**
+     * Run the http server
+     * @throws IOException
+     */
     public void run() throws IOException {
         while(true){
             ServerSocket serverSocket = null;
@@ -67,10 +79,14 @@ public class HttpServer {
         }
     }
 
-
-    public static void getImagen(String tipo, OutputStream outputStream){
+    /**
+     * Method to get a image to load
+     * @param path The path of the image
+     * @param outputStream The outputStream of the client socket
+     */
+    public static void getImagen(String path, OutputStream outputStream){
         try {
-            BufferedImage image = ImageIO.read(new File(System.getProperty("user.dir") + tipo));
+            BufferedImage image = ImageIO.read(new File(System.getProperty("user.dir") + path));
             ByteArrayOutputStream ArrBytes = new ByteArrayOutputStream();
             DataOutputStream out = new DataOutputStream(outputStream);
             ImageIO.write(image, "PNG", ArrBytes);
@@ -83,9 +99,15 @@ public class HttpServer {
         }
     }
 
-    private static void getResource(String ruta, OutputStream outputStream,String type){
+    /**
+     * Method to get a resource as html or js
+     * @param path The path of the resource
+     * @param outputStream The outputStream of the client socket
+     * @param type The type of the resource
+     */
+    private static void getResource(String path, OutputStream outputStream,String type){
         try {
-            BufferedReader in = new BufferedReader(new FileReader(System.getProperty("user.dir")+ruta));
+            BufferedReader in = new BufferedReader(new FileReader(System.getProperty("user.dir")+path));
             String out = "";
             String line;
             while ((line = in.readLine()) != null){

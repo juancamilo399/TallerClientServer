@@ -3,6 +3,9 @@ package edu.escuelaing.arep;
 import java.net.*;
 import java.io.*;
 
+/**
+ * Example class of a Http Server
+ */
 public class HttpServerExample {
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = null;

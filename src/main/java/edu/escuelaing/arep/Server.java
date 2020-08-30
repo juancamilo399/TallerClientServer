@@ -7,6 +7,9 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * Class of the server to squared a number
+ */
 public class Server {
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = null;
@@ -30,7 +33,6 @@ public class Server {
         out.println();
         String inputLine, outputLine;
         while ((inputLine = in .readLine()) != null) {
-            //System.out.println("Number: "+inputLine);
             if (inputLine.equals("Bye")) {
                 out.println("Bye");
                 break;
