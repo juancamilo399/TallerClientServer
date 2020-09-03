@@ -4,6 +4,9 @@
 
 Application deployed in heroku: [here](https://hidden-caverns-54395.herokuapp.com/index.html)
 
+
+The goal of this workshop is to write a web server using java that supports multiple requests in a row. The server should return all requested static files, including html pages and images. A web page will be built using javascript to test the server.
+
 ## Getting Started
 
 The following instructions will allow you to have a copy of the project and run it on your machine.
@@ -52,6 +55,10 @@ View [Documentation](https://juancamilo399.github.io/TallerClientServer/apidocs/
 
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [Heroku](https://www.heroku.com/platform) - Deploy platform
+
+## Inform
+
+* [View inform](https://github.com/juancamilo399/TallerClientServer/blob/master/Workshop_3.pdf)
 
 ## Author
 
